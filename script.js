@@ -29,7 +29,12 @@ function renderToWrapper() {
   wrapper.innerHTML = res;
 }
 
-// form.addEventListener('submit',
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let obj = {id: Date.now(), title: inpTitle.value 
+};
+
+inpTitle.value === "" ? alert("Enter something to input: ") : titles.push(obj);
 
 function deleteTitle(ind) {
   titles.splice(ind, 1);
