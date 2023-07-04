@@ -1,3 +1,4 @@
+// <!-- ----- Bismillah ---- -->
 const wrapper = document.querySelector(".wrapper");
 const form = document.getElementById("form");
 const inpTitle = document.getElementById("title");
@@ -27,3 +28,17 @@ function renderToWrapper() {
 
   wrapper.innerHTML = res;
 }
+
+// form.addEventListener('submit',
+
+function deleteTitle(ind) {
+  titles.splice(ind, 1);
+  renderToWrapper();
+}
+
+function editTitle(ind) {
+  titles[ind].title = promptTitle("Enter new title");
+  renderToWrapper();
+}
+
+renderToWrapper();
