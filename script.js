@@ -27,7 +27,7 @@ function renderToWrapper() {
   });
 
   wrapper.innerHTML = res;
-}
+};
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -39,11 +39,11 @@ inpTitle.value === "" ? alert("Enter something to input: ") : titles.push(obj);
 function deleteTitle(ind) {
   titles.splice(ind, 1);
   renderToWrapper();
-}
+};
 
 function editTitle(ind) {
   titles[ind].title = promptTitle("Enter new title");
   renderToWrapper();
-}
+};
 
 renderToWrapper();
