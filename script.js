@@ -47,6 +47,30 @@ function editTitle(ind) {
   renderToWrapper();
 };
 
+function copyTitle(ind) {
+  navigator.clipboard.writeText(titles[ind].title).then(() => {
+    console.log("Copied");
+  });
+};
+
+function likeTitle(ind) {
+  likedTitles.push(titles[ind]);
+  likedTitles.splice(ind, 1);
+  renderToLiked();
+  renderToWrapper();
+};
+
+function backTitle(ind) {
+  titles.push(likedTitles[ind]);
+  likedTitles.splice(ind,1);
+  renderToLiked();
+  renderToWrapper();
+};
+
+clearAll.onclick = () => {
+  likedTitles = [];
+  renderToLiked();
+};
 
 
 renderToWrapper();
