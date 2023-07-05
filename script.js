@@ -25,7 +25,7 @@ function renderToWrapper() {
   });
 
   wrapper.innerHTML = res;
-}
+};
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -40,17 +40,13 @@ form.addEventListener("submit", (e) => {
 function deleteTitle(ind) {
   titles.splice(ind, 1);
   renderToWrapper();
-}
+};
 
 function editTitle(ind) {
   titles[ind].title = prompt("Enter new title");
   renderToWrapper();
-}
+};
 
-function copyTitle(ind) {
-  navigator.clipboard.writeText(titles[ind].title).then(() => {
-    console.log("Copied");
-  });
-}
+
 
 renderToWrapper();
